@@ -16,7 +16,7 @@ import {ErrorSnackbar} from '../components/ErrorSnackbar/ErrorSnackbar'
 import {useDispatch, useSelector} from 'react-redux'
 import {AppRootStateType} from './store'
 import {initializeAppTC, RequestStatusType} from './app-reducer'
-import {BrowserRouter, Route} from "react-router-dom";
+import {HashRouter, Route} from "react-router-dom";
 import {Login} from "../features/Login/Login";
 import {logoutTC} from "../features/Login/auth-reducer";
 
@@ -44,7 +44,7 @@ function App({demo = false}: PropsType) {
         return <CircularProgress color="secondary" style={{position: 'fixed', top: '30%', left: '50%'}}/>
     }
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter basename={process.env.PUBLIC_URL}>
             <div className="App">
                 <ErrorSnackbar />
                 <AppBar position="static">
@@ -65,7 +65,7 @@ function App({demo = false}: PropsType) {
 
                 </Container>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
