@@ -44,7 +44,7 @@ function App({demo = false}: PropsType) {
         return <CircularProgress color="secondary" style={{position: 'fixed', top: '30%', left: '50%'}}/>
     }
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className="App">
                 <ErrorSnackbar />
                 <AppBar position="static">
