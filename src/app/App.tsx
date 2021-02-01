@@ -62,7 +62,6 @@ function App({demo = false}: PropsType) {
                 <Container fixed>
                     <Route path='/login' render={()=> <Login/>}/>
                     <Route exact path='/' render={()=> <TodolistsList demo={demo}/>}/>
-
                 </Container>
             </div>
         </HashRouter>
